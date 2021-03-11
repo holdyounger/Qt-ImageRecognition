@@ -16,6 +16,18 @@
 #include <QDebug>
 #include <QWidget>
 #include <QLineEdit>
+#include <QMap>
+#include <QJsonObject>
+#include <QJsonDocument>
+#include <QJsonValue>
+#include <QJsonArray>
+#include <QStyle>
+#include <QStringList>
+#include <QSpacerItem>
+#include "http.h"
+#include "image.h"
+
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -32,11 +44,12 @@ public:
     void initMenu();
     void initConnect();
     void initControl();
-
+    void initStyle();
 
 private slots:
     void openImageSlot();
     void aboutQtSlot();
+    void runRecog();
 
 private:
     Ui::MainWindow *ui;
@@ -60,10 +73,10 @@ private:
     QPushButton *runBtn;
 
     // 输出框
-    QLineEdit *LineEoutput;
+    QLineEdit *lineEditOutput;
 
 
-
+    QString imgPath;
 
 
 };

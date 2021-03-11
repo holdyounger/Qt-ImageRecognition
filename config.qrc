@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>setting/autoHooks.bat</file>
+        <file>setting/commit-msg.sample</file>
+        <file>qss/new2.qss</file>
+    </qresource>
+</RCC>
